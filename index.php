@@ -57,13 +57,21 @@ if ($sql->rowCount() > 0) {
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>
 
-                        <a href="#" class="action-button delete-button">
+                        <a
+                            href="actions/delete.php?id=<?= $task['id'] ?>"
+                            class="action-button delete-button">
                             <i class="fa-solid fa-trash"></i>
                         </a>
                     </div>
 
-                    <form action="" class="to-do-form edit-task hidden">
-                        <input type="text" name="description" placeholder="Edit your task here" />
+                    <form action=""
+                        class="to-do-form edit-task hidden">
+                        <input
+                            type="text"
+                            name="description"
+                            placeholder="Edit your task here"
+                            value="<?= $task['description'] ?>" 
+                        />
                         <button type="submit" class="form-button confirm-button">
                             <i class="fa-solid fa-check"></i>
                         </button>
