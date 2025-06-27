@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shrikhand&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(../images/image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+}
+
+#to_do {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: rgba(44, 0, 102, 0.75);
+    padding: 24px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+#to_do h1 {
+    color: #ffffaa;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.to-do-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.to-do-form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ffffaa;
+    color: #ffffaa;
+    font-size: 16px;
+    flex: 1;
+    padding: 6px 4px;
+}
+
+.form-button {
+  background: #ffffaa;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.form-button:hover {
+  transform: scale(1.1);
+}
+
+
+
+.form-button i {
+    color: rgba(44, 0, 102);
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+.form-button:hover i {
+    transform: scale(1.2);
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 6px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.task input[type="checkbox"] {
+    accent-color: #ffffaa;
+    width: 18px;
+    height: 18px;
+}
+
+.task-description {
+    color: #ffffaa;
+    flex: 1;
+    font-size: 15px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-actions a {
+    text-decoration: none;
+}
+
+
+
+.task-actions a:hover i {
+    transform: scale(1.2);
+}
+
+.edit-task {
+    /* display: none; */
+    margin-top: 10px;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.action-button.edit-button{
+    color: aquamarine;
+}
+
+.action-button.delete-button{
+    color: rgb(255, 68, 68);
+}
+
+.edit-task input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ffffaa;
+    color: #ffffaa;
+    font-size: 16px;
+    flex: 1;
+    padding: 6px 4px;
+}
+
+.edit-task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end; /* empurra o botão para o limite direito */
+    width: 100%;
+}
+
+.edit-task input {
+    flex: 1; /* ocupa todo o espaço restante */
+}
+
+.confirm-button {
+    background: #ffffaa;
+    border: none;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    margin-left: 0; /* sem margem extra */
+}
+
+.confirm-button i {
+    color: rgba(44, 0, 102);
+    font-size: 18px;
+}
+
+.confirm-button:hover {
+    transform: scale(1.1);
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+.task .progress.done + .task-description{
+    text-decoration: line-through;
+    color: gray;
+}
+
