@@ -27,7 +27,7 @@ if ($sql->rowCount() > 0) {
         <h1>To Do List</h1>
 
         <!-- Formulário principa -->
-        <form action="" class="to-do-form">
+        <form action="actions/create.php" method="POST" class="to-do-form">
             <input
                 type="text"
                 name="description"
